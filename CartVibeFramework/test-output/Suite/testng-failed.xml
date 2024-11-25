@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="php.ecom.generic.listenerutility.ListenerImpClass"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Test1(failed)">
+    <classes>
+      <class name="php.ecom.UserTest.UserCreateAccountTest">
+        <methods>
+          <include name="createUserAccountTest"/>
+          <include name="configAM"/>
+          <include name="configAC"/>
+          <include name="configBM"/>
+          <include name="configCS"/>
+        </methods>
+      </class> <!-- php.ecom.UserTest.UserCreateAccountTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test thread-count="4" parallel="tests" name="Test3(failed)">
+    <classes>
+      <class name="php.ecom.UserTest.MyAccountTest">
+        <methods>
+          <include name="configAM"/>
+          <include name="updateAddressInUserAccount"/>
+          <include name="configAC"/>
+          <include name="configBM"/>
+          <include name="configCS"/>
+        </methods>
+      </class> <!-- php.ecom.UserTest.MyAccountTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test thread-count="4" parallel="tests" name="Test2(failed)">
+    <classes>
+      <class name="php.ecomm.AdminTest.AdminOrdersTest">
+        <methods>
+          <include name="configAM"/>
+          <include name="manageTodayPendingOrder"/>
+          <include name="configAC"/>
+          <include name="configBM"/>
+          <include name="configCS"/>
+        </methods>
+      </class> <!-- php.ecomm.AdminTest.AdminOrdersTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
